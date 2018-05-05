@@ -96,7 +96,7 @@ if __name__ == '__main__':
 
 ### 2.1 源码如下：
 
-```class 
+```python 
 import requests
 from bs4 import BeautifulSoup
 import sys
@@ -199,7 +199,7 @@ if __name__ == '__main__':
 
 #### 3.1 源码如下：
 
-``` class
+``` python 
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
@@ -301,7 +301,7 @@ main()
 ### 4 智联网信息抓取--生成CSV文件，存储到本地项目（requests+csv+re）
 
 #### 4.1 源码如下：
-``` class
+``` python 
 import re
 import requests
 import csv
@@ -411,11 +411,11 @@ if __name__ == '__main__':
 ![class](zhilianCSV.PNG)
 
 
-##5. 网易云音乐爬取周杰伦歌曲歌词，并进行可视化分析（jieba分词+requests+pyecharts+snownlp情绪分析）
+## 5. 网易云音乐爬取周杰伦歌曲歌词，并进行可视化分析（jieba分词+requests+pyecharts+snownlp情绪分析）
 
-###5.1 [点击看源码](https://github.com/zhongyuhang/spiderLearning/lyricAnalysis.py)
+### 5.1 [点击看源码](https://github.com/zhongyuhang/spiderLearning/blob/master/lyricAnalysis.py)
 
-###5.2 目前做出来的图表：
+### 5.2 目前做出来的图表：
 ![class](柱状图数据堆叠示例.png)
 
 ![class](周杰伦情绪较好的前十首歌.png)
