@@ -195,7 +195,6 @@ class music:
 		allLyric = str([line.strip() for line in open(file, 'r', encoding='utf-8').readlines()])
 		# 获取全部歌词
 		allLyrics = allLyric.replace("'", "").replace(" ", "").replace("?", "").replace(",", "").replace('"', '').replace(".", "").replace("!", "").replace(":", "")
-		#用jieba分词进行歌词过滤，并保存到ting.txt文件
 		self.splitSentence('allLyric_no_space.txt', '分词过滤后.txt')
 
 		# 词频统计
@@ -276,5 +275,23 @@ class music:
 		bar.add("周杰伦歌曲情绪可视化", x_axis_first, y_axis_first, xaxis_interval=0,)
 		bar.render(r"D:\PyCharm\spiderLearning\musicSpider\chart\周杰伦最消极歌曲TOP10.html")
 
-a = music()
-a.emotionAnalysis()
+"""
+ex = music()
+
+通过遍历获取的专辑id获得全部的歌曲id
+for album_id in ex.getAlbum():
+	ex.getSong(album_id)
+	
+获取评论
+ex.getCommon()
+
+将与歌词无关的文件行全部去掉，将所有歌词合并生成新的歌词文件allLyric_no_space.txt
+ex.mergedFile()
+
+将所有词过滤并记录出现频率
+ex.lyricAnalysis()
+
+使用snownlp模块对歌词进行情绪分析，并生成图表
+ex.emotionAnalysis()
+
+"""
