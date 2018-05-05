@@ -1,11 +1,11 @@
 # 爬虫实践
-|学校|专业|姓名|联系方式|
+|学校|专业|姓名|邮箱|
 |:-------:|:-------------: | :----------:|:-------------: |
-|成都大学|软件工程(本)15-2|钟宇航|18990051970|
-## 1. 京东商城-手机页面图片爬取
+|成都大学|软件工程(本)15-2|钟宇航|18990051970@163.com|
+## 1. 京东商城-手机页面图片爬取（BeautifulSoup+requests+多线程）
 ### 1.1 源码如下：
 
-``` class
+``` python
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -92,7 +92,7 @@ if __name__ == '__main__':
 
 
 
-## 2. mzitu网站照片爬取
+## 2. mzitu网站照片爬取（BeautifulSoup+requests+多线程）
 
 ### 2.1 源码如下：
 
@@ -195,7 +195,7 @@ if __name__ == '__main__':
 
 
 
-### 3 淘宝商品抓取--存储到mongodb
+### 3 淘宝商品抓取--存储到mongodb（selenium+mongodb）
 
 #### 3.1 源码如下：
 
@@ -298,7 +298,7 @@ main()
 ![class](seleniumSpider.PNG)
 
 
-### 4 智联网信息抓取--生成CSV文件，存储到本地项目
+### 4 智联网信息抓取--生成CSV文件，存储到本地项目（requests+csv+re）
 
 #### 4.1 源码如下：
 ``` class
@@ -409,3 +409,15 @@ if __name__ == '__main__':
 ![class](zhilianSpider.PNG)
 
 ![class](zhilianCSV.PNG)
+
+
+##5. 网易云音乐爬取周杰伦歌曲歌词，并进行可视化分析（jieba分词+requests+pyecharts+snownlp情绪分析）
+
+###5.1 [点击看源码](https://github.com/zhongyuhang/spiderLearning/lyricAnalysis.py)
+
+###5.2 目前做出来的图表：
+![class](柱状图数据堆叠示例.png)
+
+![class](周杰伦情绪较好的前十首歌.png)
+
+![class](周杰伦情绪较差的前十首歌.png)
